@@ -52,25 +52,55 @@
 // 	// line_counter = line_counter + 1;
 // }
 
- function chessBoard (boardSize) {
+ //function chessBoard (boardSize) {
+ //
+	// var boardSize = boardSize;
+ //
+ //
+	// for (var hash = '#'; hash.length <= boardSize; hash += '#'){
+	//	 //console.log(hash)
+	//	 if (hash.length = boardSize) {
+	//		 chessBoardLength = hash
+	//	 }
+	// }
+ //
+ //
+	// for (var counter = 0; counter < boardSize; counter ++) {
+	//	 console.log(chessBoardLength);
+	// }
+ //}
+ //
+ //chessBoard(19);
 
-	 var boardSize = boardSize;
 
 
-	 for (var hash = '#'; hash.length <= boardSize; hash += '#'){
-		 //console.log(hash)
-		 if (hash.length = boardSize) {
-			 chessBoardLength = hash
-		 }
-	 }
 
 
-	 for (var counter = 0; counter < boardSize; counter ++) {
-		 console.log(chessBoardLength);
-	 }
- }
 
- chessBoard(19);
+function chessBoard (boardSize) {
+
+	var hashSpaceArray = [];
+
+	for (var counter = 0; counter < boardSize; counter++){
+		hashSpaceArray.push('#');
+		if (hashSpaceArray.length < boardSize) {
+			hashSpaceArray.push(' ');
+		}
+		if (hashSpaceArray.length <= boardSize) {
+			var hashSpaceString = hashSpaceArray.join(' ');
+		}
+	}
+
+	for (var counter2 = 0; counter2 < boardSize; counter2++) {
+		console.log(hashSpaceString);
+	}
+}
+
+chessBoard(9);
+
+
+
+
 
 
 
